@@ -1,13 +1,11 @@
----
 apiVersion: image.toolkit.fluxcd.io/v1alpha2
 kind: ImagePolicy
 metadata:
   name: podinfo
   namespace: flux-system
 spec:
-  filterTags:
-    pattern: 'dev'
-    extract: '$ts'
+  imageRepositoryRef:
+    name: podinfo
   policy:
-     numerical:
-      order: asc
+    semver:
+      range: 1.0.x
