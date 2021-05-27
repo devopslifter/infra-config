@@ -5,9 +5,10 @@ metadata:
   name: podinfo
   namespace: flux-system
 spec:
-  imageRepositoryRef:
-    name: podinfo
+  filterTags:
+    pattern: '^dev-*'
+    extract: '$timestamp'
   policy:
-     numerical:
+    alphabetical:
       order: asc
 
