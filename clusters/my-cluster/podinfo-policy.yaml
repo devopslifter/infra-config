@@ -8,6 +8,6 @@ spec:
   imageRepositoryRef:
     name: podinfo
   policy:
-    semver:
-      range: dev-*
+     numerical:
+      order: asc
 
