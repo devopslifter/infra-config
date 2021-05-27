@@ -6,9 +6,8 @@ metadata:
   namespace: flux-system
 spec:
   filterTags:
-    pattern: '^dev-*'
-    extract: '$timestamp'
+    pattern: '^main-[a-fA-F0-9]+-(?P<ts>.*)'
+    extract: '$ts'
   policy:
-    alphabetical:
+     numerical:
       order: asc
-
